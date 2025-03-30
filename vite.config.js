@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // 只在生产环境使用base前缀，开发环境使用根路径
-  base: "/newMetrograph",
+  base: "/scrapmetrograph",
   server: {
     fs: {
       // 允许访问项目根目录以外的文件
