@@ -1,0 +1,263 @@
+.movie-details {
+  display: flex;
+  /* flex-direction: column; */
+  font-family: "Merriweather Sans", sans-serif;
+  gap: 3vw;
+  justify-content: space-between;
+  /* border: 3px solid rebeccapurple; */
+}
+
+.movieInfo-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  /* border: 3px solid blue; */
+  width: 60%;
+}
+
+.director,
+.description,
+.title,
+.time,
+.screentime {
+  display: flex;
+  gap: 1vw;
+  justify-content: flex-start;
+}
+
+.screentime {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  padding: 8px 0px;
+}
+
+.title-Info {
+  margin-top: 5px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #1c3d8a;
+}
+
+.time-Info {
+  opacity: 35%;
+  font-weight: normal;
+  font-size: 1.2em;
+  margin-top: -10px;
+}
+
+.director {
+  margin-top: 2vh;
+}
+
+.Director-text,
+.description-Text,
+.empty,
+.screentime-Text {
+  min-width: 112px;
+  text-align: left;
+  margin-right: 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.director-Info,
+.screentime-Info {
+  color: rgb(160, 27, 27);
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.description-Info {
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.8em;
+  font-size: 1em;
+  color: #838383;
+}
+
+.poster-Container {
+  width: inline-flex;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  /* border: 3px solid red; */
+}
+
+.details-image {
+  width: 20vw;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.buy-button {
+  border: 2px rgb(160, 27, 27) solid;
+  margin-top: auto;
+  font-size: 1.2em;
+  background: none;
+  padding: 8px 0;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 20vw;
+  font-weight: bold;
+  transition: opacity 0.2s ease;
+}
+
+/* .buy-button a :hover{
+    cursor: pointer;
+} */
+
+.buy-button a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(160, 27, 27);
+  font-family: "Merriweather Sans", sans-serif;
+  padding: 4px;
+  display: block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.buy-button a:hover {
+  background-color: rgb(160, 27, 27, 0.1);
+}
+
+/* 售罄状态按钮样式 */
+.buy-button.sold-out {
+  border-color: #999;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.buy-button a.sold-out {
+  color: #999;
+  cursor: not-allowed;
+}
+
+.buy-button.sold-out a:hover {
+  background-color: transparent;
+}
+
+/* 
+@media (max-width: 2560px) {
+  .title-Info {
+    font-size: 3em;
+  }
+
+  .time-Info,
+  .director-Info,
+  .screentime-Info,
+  .description-Info {
+    font-size: 1.2em;
+  }
+
+  .Director-text,
+  .description-Text,
+  .screentime-Text {
+    min-width: 130px;
+
+    font-size: 1.1em;
+  }
+
+  .buy-button {
+    font-size: 1.1em;
+  }
+} */
+
+@media (max-width: 1600px) {
+
+  .poster-Container {
+    width: inline-flex;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    /* border: 3px solid red; */
+  }
+
+  .title-Info {
+    font-size: 2em;
+  }
+
+  .time-Info,
+  .director-Info,
+  .screentime-Info,
+  .description-Info {
+    font-size: 1em;
+  }
+
+  .Director-text,
+  .description-Text,
+  .screentime-Text {
+    font-size: 0.9em;
+  }
+
+  .buy-button {
+    font-size: 1em;
+  }
+}
+
+/* Small Screens (mobile devices) */
+@media (max-width: 1200px) {
+
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .movieInfo-Container {
+    width: 100%;
+    order: 2;
+  }
+  
+  .poster-Container {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  
+  /* 修复图片和按钮的样式 */
+  .details-image {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 0rem;
+  }
+  
+  .buy-button {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 0;
+    font-size: 0.9em;
+  }
+  
+  .title-Info {
+    font-size: 1.5em;
+  }
+
+  .time-Info,
+  .director-Info,
+  .screentime-Info,
+  .description-Info {
+    font-size: 0.8em;
+  }
+
+  .Director-text,
+  .description-Text,
+  .screentime-Text {
+    font-size: 0.8em;
+  }
+
+  .movie-details {
+    gap: 1.5vw;
+  }
+}
+

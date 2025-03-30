@@ -1,0 +1,129 @@
+*{
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s ease-in-out;
+}
+
+body {
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+.app-container{
+  height: 100vh;
+  display: flex;
+  gap: 1vw;
+  flex-direction: column;
+  padding: 3vw;
+}
+
+.Navbar-Container {
+  position: sticky;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  color: #fff;
+  /* margin-bottom: 25px; */
+  box-sizing: border-box;
+}
+
+.content-container {
+  display: flex;
+  flex: 1;
+  gap: 1vw;
+  overflow-y: auto;
+}
+
+.filmlist-container {
+  width: 40%; 
+  gap: 1vw;
+  /* flex: 1; */
+  /* height:calc(100vh - 6vh - 8vh) ; */
+  overflow-y: auto;
+  padding: 1vw;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  /* box-sizing: border-box; */
+}
+
+.filmlist-container::-webkit-scrollbar {
+  display: none; 
+}
+
+.movie-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%; 
+  padding: 2vw;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+#placeholder {
+  font-family: "Merriweather Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center; 
+  font-size: 1.5rem;
+  color: #1c3d8a;
+}
+
+.loading{
+  color: rgb(160, 27, 27);
+
+}
+
+@media screen and (max-width: 1600px) {
+  .filmlist-container {
+    width: 30%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .movie-details-container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .filmlist-container {
+    padding: 1vw;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  /* .movie-details-container {
+    width: 75%;
+  } */
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .app-container{
+    padding: 6vw;
+    gap: 4vw;
+  }
+
+  .filmlist-container {
+    width: 100%;
+    padding: 2vw;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  /* .movie-details-container {
+    width: 75%;
+  } */
+  .main-content {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,18 @@
+.movie-screenings {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.screening-time {
+  font-size: 0.9em;
+  color: #1c3d8a;
+  font-weight: bold;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .screening-time {
+    font-size: 0.8em;
+  }
+} 

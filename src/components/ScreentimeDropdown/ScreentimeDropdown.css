@@ -1,0 +1,138 @@
+/* 放映时间下拉菜单样式 */
+.screentime-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.screentime-dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(160, 27, 27);
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  transition: all 0.2s ease;
+}
+
+.screentime-dropdown-header:hover {
+  background-color: #f0f0f0;
+}
+
+/* 售罄状态样式 */
+.screentime-dropdown-header.sold-out {
+  color: #999;
+  border-color: #e0e0e0;
+  background-color: #f8f8f8;
+}
+
+.sold-out-badge {
+  font-size: 0.75em;
+  color: #F44336;;
+  padding: 2px 6px;
+  margin-left: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.dropdown-arrow {
+  font-size: 0.8em;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.screentime-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-top: 5px;
+}
+
+.screening-date {
+  padding: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.screening-date:last-child {
+  border-bottom: none;
+}
+
+.date-header {
+  font-weight: bold;
+  color: #1c3d8a;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+}
+
+.showtimes-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.showtime-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: #f8f8f8;
+  font-size: 0.85em;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+.showtime-item:hover {
+  background-color: #f0f0f0;
+}
+
+.showtime {
+  font-weight: bold;
+  color: #1c3d8a;
+}
+
+.status {
+  font-size: 0.8em;
+  color: #4CAF50;
+}
+
+.showtime-item.sold-out {
+  width: 100%;
+  opacity: 0.7;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+}
+
+.showtime-item.sold-out .status {
+  color: #F44336;
+}
+
+.showtime-item.sold-out:hover {
+  background-color: #f5f5f5;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .showtime-item {
+    width: 100%;
+  }
+  
+  .screentime-dropdown-content {
+    max-height: 250px;
+  }
+} 

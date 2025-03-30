@@ -1,0 +1,76 @@
+.Navbar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 1vw 0;
+  padding-top: 0;
+}
+
+.logo, .month{
+  font-family: "Barrio", system-ui;
+
+  font-size: clamp(2rem, 2vw + 1rem, 4rem);
+  color: rgb(151, 20, 18);
+}
+
+/* .month {
+  font-family: "Barrio", system-ui;
+
+  font-size: clamp(0.8rem, 1.5vw + 0.6rem, 4rem);
+  
+  color: rgb(151, 20, 18);
+} */
+
+.search-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+  background: rgb(228, 228, 228);
+  /* border: 3px black solid; */
+  
+}
+
+.search button {
+  background-color: rgb(214, 214, 214);
+  width: 110px;
+  font-size: 20px;
+  margin: 0;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.search-input {
+  font-size: 23px;
+  width: 100%;
+  font-family: "Courier New", Courier, monospace;
+  outline: none;
+  margin-right: 7px;
+  padding: 5px;
+}
+
+.search-input::placeholder {
+  color: rgb(192, 192, 192);
+}
+
+@media screen and (max-width: 480px) {
+
+  .logo {
+    font-family: "Barrio", system-ui;
+    font-size: 1.8em;
+    color: rgb(151, 20, 18);
+  }
+  
+  .month {
+    font-family: "Barrio", system-ui;
+  
+    font-size: 1.2em;
+    color: rgb(151, 20, 18);
+  }
+
+}
